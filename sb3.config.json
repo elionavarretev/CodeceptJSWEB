@@ -1,0 +1,6 @@
+{
+    "reportTitle": "Somos Belcorp 3.0",
+    "name" : "SomosBelcorp3.0",
+    "urlData" : "http://localhost:3000/data",
+    "host" : "http://sb2qa.somosbelcorp.com/"
+}

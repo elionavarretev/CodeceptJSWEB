@@ -1,0 +1,36 @@
+{
+    "env": {
+        "browser": true,
+        "es6": true,
+        "node": true
+    },
+    "extends": ["plugin:codeceptjs/recommended", "eslint:recommended"],
+    "parserOptions": {
+        "sourceType": "module",
+        "ecmaVersion": 2017
+    },
+    "ignorePatterns": ["node_modules/"],
+    "rules": {
+        "indent": [
+            "error",
+            "tab"
+        ],
+        "linebreak-style": [
+            "error",
+            "unix"
+        ],
+        "quotes": [
+            "error",
+            "single"
+        ],
+        "semi": [
+            "error",
+            "always"
+        ],
+        "no-control-regex": 0,
+        "codeceptjs/no-actor-in-scenario": 1,
+        "codeceptjs/no-exclusive-tests":1,
+        "codeceptjs/no-skipped-tests":1,
+        "codeceptjs/no-pause-in-scenario": 1
+    }
+}

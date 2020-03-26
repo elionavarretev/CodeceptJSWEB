@@ -1,0 +1,57 @@
+{
+  "name": "test1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "initApiRest": "node app/index.js",
+    "codeceptjs": "codeceptjs init",
+    "codeceptjs:gherkin": "codeceptjs gherkin:init",
+    "test": "codeceptjs run --grep @basic --reporter mochawesome >./log/server.log",
+    "test:debug": "codeceptjs run --grep @basic --debug",
+    "test:debug@login": "codeceptjs run --grep @login --debug --reporter mochawesome >./log/server.log",
+    "test:debug@addproducts": "codeceptjs run --grep @addproducts --debug --reporter mochawesome >./log/server.log",
+    "test:debug@addproducts/fromcarousel": "codeceptjs run --grep @addproducts/fromcarousel --debug --reporter mochawesome >./log/server.log",
+    "test:debug@addproducts/search": "codeceptjs run --grep @addproducts/search --debug --reporter mochawesome >./log/server.log",
+    "test:debug@removeproducts": "codeceptjs run --grep @removeproducts --debug --reporter mochawesome >./log/server.log",
+    "test:debug@modifyproducts": "codeceptjs run --grep @modifyproducts --debug --reporter mochawesome >./log/server.log",
+    "test:debug@sendorders": "codeceptjs run --grep @sendorders --debug --reporter mochawesome >./log/server.log",
+    "test:debug:log": "codeceptjs run --grep @basic --debug >./log/server.log",
+    "test:allure": "codeceptjs run --grep @basic --plugins allure >./log/server.log",
+    "test:allure:debug": "codeceptjs run --grep @basic --debug -p allure >./log/server.log",
+    "test:multiple:basic": "codeceptjs run-multiple basic --grep @basic --reporter mochawesome >./log/server.log",
+    "test:multiple:smoke": "codeceptjs run-multiple smoke --reporter mochawesome >./log/server.log",
+    "allure": "allure serve report",
+    "format": "prettier --write 'src/**/*.js'",
+    "lint": "eslint ./src",
+    "lint:fix": "eslint ./src --fix",
+    "gherkin:lint": "node ./node_modules/gherkin-lint/dist/main.js -c ./.gherkin-lintrc.json ./src/features/**"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hohammedestrada/Codeceptjs-protactor.git"
+  },
+  "keywords": [],
+  "author": "H0h4mmed Estrada",
+  "license": "ISC",
+  "dependencies": {
+    "@wdio/selenium-standalone-service": "^5.16.10",
+    "body-parser": "^1.19.0",
+    "codeceptjs-assert": "0.0.4",
+    "express": "^4.17.1",
+    "mocha": "^6.2.2",
+    "mochawesome": "^4.1.0",
+    "protractor": "^5.4.2"
+  },
+  "devDependencies": {
+    "codeceptjs": "^2.5.0",
+    "eslint": "^6.7.2",
+    "eslint-plugin-codeceptjs": "^1.2.0",
+    "gherkin": "^9.0.0",
+    "gherkin-lint": "^3.3.10",
+    "prettier": "^1.19.1",
+    "puppeteer": "^2.1.1",
+    "ts-node": "^8.6.2",
+    "typescript": "^3.8.3"
+  }
+}
