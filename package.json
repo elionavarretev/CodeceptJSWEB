@@ -10,9 +10,9 @@
     "bdd",
     "testing"
   ],
-  "main": "index.js",
+  
   "scripts": {
-    "initApiRest": "node app/index.js",
+  
     "codeceptjs": "codeceptjs init",
     "codeceptjs:gherkin": "codeceptjs gherkin:init",
     "test": "codeceptjs run --grep @basic --reporter mochawesome >./log/server.log",
