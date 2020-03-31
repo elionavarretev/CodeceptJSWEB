@@ -4,19 +4,20 @@ const { setSharedCookies } = require('@codeceptjs/configure');
 
 setSharedCookies();
 
-let config = AutomationUtil.parseFileSync('sb3.config.json');
+let config = AutomationUtil.parseFileSync('test.config.json');
 
 exports.config = {
 	output: 'report',
 	helpers: {
+		"Mochawesome": {
+			"uniqueScreenshotNames": "true" // uniqueScreenshotNames in Mochawesome helper
+		  },
 		REST: {
 			defaultHeaders: {
 				/* 'Auth': '11111', */
 				'Content-Type': 'application/json',
 				'Accept': 'application/json',
 			  },
-		},Mochawesome:{
-			uniqueScreenshotNames:"true"
 		},
 		Protractor: {
 			url: config.host,
@@ -73,7 +74,7 @@ exports.config = {
 			browsers: ['chrome', 'firefox']
 		},
 		smoke:{
-			grep: '@basic',
+			grep: '@caso',
 			outputName: 'smoke',
 			browsers: ['firefox',
 				{
@@ -93,14 +94,7 @@ exports.config = {
 			// run all tests in chrome and firefox
 			browsers: ["chrome", "firefox"]
 		  }
-		  ,
-		  scripts: {
-			"codeceptjs": "codeceptjs run --reporter mochawesome"
-		  },
-		  dependencies: {
-			"codeceptjs": "1.0.3",
-			"mochawesome": "2.3.1"
-		  }
+		 
 	},
 	tests: './tests/*.spec.js',
 	timeout: 10000,

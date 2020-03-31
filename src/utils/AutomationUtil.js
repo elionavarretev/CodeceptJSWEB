@@ -3,14 +3,6 @@ const ConstUtil = require('./ConstUtil');
 const fs = require('fs');
 const codeceptjs = require('codeceptjs');
 
-if(!String.prototype.obtenerPrecio){
-	String.prototype.obtenerPrecio = function() {
-		return parseFloat(this.trim()
-		.replace(ConstUtil.STR_SOLES,ConstUtil.EMPTY)
-		.replace(ConstUtil.COMMA,ConstUtil.EMPTY)
-		.trim()).toFixed(ConstUtil.FIXED_PRICE);
-	};
-}
 
 if(!String.prototype.isEmpty){
 	String.prototype.isEmpty = function() {

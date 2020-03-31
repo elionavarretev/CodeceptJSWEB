@@ -1,7 +1,15 @@
 {
-  "name": "test1",
+  "name": "codeceptjsautomation",
   "version": "1.0.0",
-  "description": "",
+  "description": "End 2 End Testing Framework",
+  "keywords": [
+    "acceptance",
+    "end2end",
+    "end 2 end",
+    "webdriver",
+    "bdd",
+    "testing"
+  ],
   "main": "index.js",
   "scripts": {
     "initApiRest": "node app/index.js",
@@ -9,13 +17,7 @@
     "codeceptjs:gherkin": "codeceptjs gherkin:init",
     "test": "codeceptjs run --grep @basic --reporter mochawesome >./log/server.log",
     "test:debug": "codeceptjs run --grep @basic --debug",
-    "test:debug@login": "codeceptjs run --grep @login --debug --reporter mochawesome >./log/server.log",
-    "test:debug@addproducts": "codeceptjs run --grep @addproducts --debug --reporter mochawesome >./log/server.log",
-    "test:debug@addproducts/fromcarousel": "codeceptjs run --grep @addproducts/fromcarousel --debug --reporter mochawesome >./log/server.log",
-    "test:debug@addproducts/search": "codeceptjs run --grep @addproducts/search --debug --reporter mochawesome >./log/server.log",
-    "test:debug@removeproducts": "codeceptjs run --grep @removeproducts --debug --reporter mochawesome >./log/server.log",
-    "test:debug@modifyproducts": "codeceptjs run --grep @modifyproducts --debug --reporter mochawesome >./log/server.log",
-    "test:debug@sendorders": "codeceptjs run --grep @sendorders --debug --reporter mochawesome >./log/server.log",
+    "test:debug@products": "codeceptjs run --grep @products --debug --reporter mochawesome >./log/server.log",
     "test:debug:log": "codeceptjs run --grep @basic --debug >./log/server.log",
     "test:allure": "codeceptjs run --grep @basic --plugins allure >./log/server.log",
     "test:allure:debug": "codeceptjs run --grep @basic --debug -p allure >./log/server.log",
@@ -29,11 +31,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/hohammedestrada/Codeceptjs-protactor.git"
+    "url": "https://github.com/elionavarretev/CodeceptJSMOBIL.git"
   },
-  "keywords": [],
-  "author": "H0h4mmed Estrada",
-  "license": "ISC",
+  "author": {
+    "name": "Elio Navarrete",
+    "email": "elionavarretev@gmail.com"
+  },
+  "homepage": "https://codecept.io",
+  "license": "ENV",
   "dependencies": {
     "@wdio/selenium-standalone-service": "^5.16.10",
     "body-parser": "^1.19.0",
@@ -41,6 +46,7 @@
     "express": "^4.17.1",
     "mocha": "^6.2.2",
     "mochawesome": "^4.1.0",
+    "mocha-multi": "1.1.3",
     "protractor": "^5.4.2"
   },
   "devDependencies": {
@@ -49,6 +55,9 @@
     "eslint-plugin-codeceptjs": "^1.2.0",
     "gherkin": "^9.0.0",
     "gherkin-lint": "^3.3.10",
+    "mocha": "^6.2.3",
+    "mocha-parallel-tests": "^2.2.2",
+    "mochawesome": "^4.1.0",
     "prettier": "^1.19.1",
     "puppeteer": "^2.1.1",
     "ts-node": "^8.6.2",

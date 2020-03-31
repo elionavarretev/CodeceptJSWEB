@@ -1,0 +1,6 @@
+{
+    "reportTitle": "Tienda Belcorp",
+    "name" : "TiendaBelcorp",
+    "urlData" : "http://localhost:3000/data",
+    "host" : "https://lbel.tiendabelcorp.com/pe/search/?text=bio"
+}
