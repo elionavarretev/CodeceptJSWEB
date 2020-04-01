@@ -21,15 +21,6 @@ class productsModule extends BaseModule.BaseModule {
 	seleccionarDetalleProducto(strDProducto) {
         this.I.click(locator.findTitlebyClass(strDProducto));
 	}	
-    
-	seleccionarCompraOnline() {
-		
-	}
-	
-	
-	seleccionarSeguirComprando() {
-		
-	}
 	
 	agregarCantidad(strCantidad) {        
         this.I.appendField(locator.txtCantidad, '');
@@ -47,25 +38,18 @@ class productsModule extends BaseModule.BaseModule {
 	seleccionarAgregarBolsa() {		
         this.I.click({id: locator.btnAgregarBolsa});
 	}
-	
-	
+		
 	seleccionarIrBolsa() {		
         this.I.click(locator.btnIrBolsa);
 	}
 	
-	
-	seleccionarIrPagarPopPup() {		
+		seleccionarIrPagarPopPup() {		
 		this.I.click(locator.btnIrPagarPopup);
 	}
 	
-	
-	seleccionarIrPagar() {		
-		/*await I.executeScript(() => {
-            window.open('https://compra.tiendabelcorp.com/pe/cart/checkout');
-		});*/
+		seleccionarIrPagar() {				
 		this.I.click(locator.btnIrPagar);
 	}
-	
 	
 	ingresarComoInvitado(strInvitado) {	
 		let arrInvitado = strInvitado.split(";");
@@ -76,8 +60,7 @@ class productsModule extends BaseModule.BaseModule {
         
         this.I.click(locator.btnIniciarComoInvitado);
 	}
-	
-	
+		
 	ingresarDireccionEnvio(strEnvio) {	
 		
 		let arrEnvio = strEnvio.split(";");
@@ -92,62 +75,6 @@ class productsModule extends BaseModule.BaseModule {
 		
 		this.I.click({id: locator.btnContinuar});
 		/**/
-	}
-	
-	
-	ingresarNombre(strNombre) {		
-		
-	}
-	
-	
-	ingresarApellido(strApellido) {		
-		
-	}
-	
-	
-	ingresarEmail(strEmail) {		
-		
-	}
-	
-	
-	ingresarConfirmarEmail(strConfirmarEmail) {		
-		
-	}
-	
-	
-	seleccionarAceptoAutorización() {		
-		
-	}
-	
-	
-	seleccionarIniciarComoInvitado() {		
-		
-	}
-	
-	
-	SeleccionarDepartamento(strDepartamento) {		
-		
-	}
-
-	
-	seleccionarAnulaCompra() {		
-		
-		
-	}
-	
-	
-	obtenerMensajeConfirmaEliminacion() {		
-	
-	}
-
-	
-	seleccionarIrATienda() {
-		
-	}
-
-	
-	ingresarDato(strDato) {
-		
 	}
 }
 
